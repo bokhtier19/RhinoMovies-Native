@@ -1,116 +1,54 @@
-# Movies App 🎬
+# RhinoMovies Native
 
-A React Native mobile app to browse and search movies using **TMDB API**.
-Users can see popular movies, search for titles, and view details including ratings and release dates.
-
----
-
-## Table of Contents
-
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Technologies](#technologies)
-* [API](#api)
-* [Contributing](#contributing)
-* [License](#license)
-
----
+A cross-platform mobile movie discovery app built with React Native (Expo), TypeScript, and Appwrite. Browse trending and top-rated films with real-time search, powered by the TMDB API.
 
 ## Features
 
-* Browse popular movies
-* Search movies by title
-* View movie details (title, poster, release date, rating)
-* Responsive UI for mobile devices
+- 🎬 Browse trending and top-rated movies via TMDB API
+- 🔍 Real-time search with debounced queries
+- 📊 Trending algorithm powered by Appwrite — tracks which movies users search most
+- 🔐 Appwrite backend for database and server functions
+- 📱 Cross-platform — iOS and Android via Expo
+- 🎨 Styled with NativeWind (Tailwind CSS for React Native)
 
----
+## Tech Stack
 
-## Screenshots
+| Layer | Technology |
+|-------|-----------|
+| Framework | React Native + Expo |
+| Language | TypeScript |
+| Styling | NativeWind (Tailwind CSS) |
+| Backend | Appwrite (Database + Functions) |
+| Movie Data | TMDB API |
+| Navigation | Expo Router |
 
-*(Add your app screenshots here)*
+## Getting Started
 
-![Screenshot 1](link-to-screenshot-1)
-![Screenshot 2](link-to-screenshot-2)
+### Prerequisites
+- Node.js 18+
+- Expo CLI (`npm install -g expo-cli`)
+- Expo Go app on your phone (for testing)
 
----
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/username/movies-app.git
-```
-
-2. Go to the project directory:
-
-```bash
-cd movies-app
-```
-
-3. Install dependencies:
+### Installation
 
 ```bash
+git clone https://github.com/bokhtier19/RhinoMovies-Native.git
+cd RhinoMovies-Native
+cp .env.example .env   # fill in your API keys
 npm install
-# or
-yarn install
-```
-
-4. Install Expo CLI (if not installed):
-
-```bash
-npm install -g expo-cli
-```
-
----
-
-## Usage
-
-1. Start the app:
-
-```bash
 npx expo start
 ```
 
-2. Scan the QR code with **Expo Go** on your mobile, or run it on an emulator.
+### Environment Variables
 
----
-
-## Technologies
-
-* React Native
-* Expo
-* TMDB API
-* Axios (for API requests)
-* TailwindCSS / NativeWind (for styling)
-
----
-
-## API
-
-This app uses **TMDB (The Movie Database) API** to fetch movie data.
-Sign up on [TMDB](https://www.themoviedb.org/) to get an API key and add it to your project:
-
-```javascript
-const API_KEY = "YOUR_TMDB_API_KEY";
+```env
+EXPO_PUBLIC_MOVIE_API_KEY=your_tmdb_bearer_token
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=your_database_id
+EXPO_PUBLIC_APPWRITE_COLLECTION_ID=your_collection_id
+EXPO_PUBLIC_APPWRITE_PROJECT_NAME=RhinoMovies
+EXPO_PUBLIC_APPWRITE_ENDPOINT=https://fra.cloud.appwrite.io/v1
 ```
 
----
-
-## Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature-name`
-3. Commit your changes: `git commit -m 'Add feature'`
-4. Push to the branch: `git push origin feature-name`
-5. Open a Pull Request
-
----
-
 ## License
-
-This project is licensed under the MIT License.
+MIT
